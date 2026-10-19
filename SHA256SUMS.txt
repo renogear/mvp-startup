@@ -1,0 +1,3 @@
+853e17fd1642847dca5a52e05c6921449e6067667accf9e3f168ca5e5b920440  PermitPilot-Annotated-Report.pdf
+a10b024a9b5a19a1314e2c2ae20e167de16fc0345447f72bb05481e026a3dc96  PermitPilot-Screenshot.png
+fa3d9321efa8f1baba73a725a7beda26bd82c16a6c8f9e6deeedd3ee1fc6b753  PermitPilot-Selected-Annotation.png
