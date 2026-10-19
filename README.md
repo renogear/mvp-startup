@@ -2,7 +2,13 @@
 
 A residential drawing-review application with an actual PDF viewer, traceable text/dimension extraction, human correction, and an evidence report. The current first milestone is tested on the user-supplied County of San Diego Plan F, sheet A1 (PDF page 5). The first future technical-compliance jurisdiction is **incorporated San José**, distinct from unincorporated Santa Clara County. **No real building-code checks are active.**
 
-## Open in your browser
+## Try the prototype without setup
+
+**[Download the interactive prototype](https://github.com/renogear/mvp-startup/archive/refs/heads/prototype-browser.zip)**. Unzip it, then open **PermitPilot.html** in a current Chrome or Edge browser. The actual San Diego Plan F/A1 reference drawing opens automatically. Click source annotations, correct measurements, upload your own documents, and export a PDF. There are no terminals, ports, accounts, servers, or API keys to configure.
+
+This standalone prototype reads embedded PDF text and saves files/corrections in this browser when storage is available. Browsers that block local-file storage show a prominent **Temporary session** notice; export before closing in that mode. It runs entirely on your device after downloading. Clearing browser storage can remove saved reviews; export important work. Image viewing works; image/scanned-text OCR, organization accounts and AI services are outside this browser-only build. Code compliance remains unevaluated. See [source and validation](prototype/README.md).
+
+## Optional private Codespaces development workspace
 
 **[Launch PermitPilot in a private GitHub Codespace](https://codespaces.new/renogear/mvp-startup?ref=app%2Fpermitpilot-interactive)**
 

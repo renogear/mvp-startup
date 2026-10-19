@@ -6,7 +6,7 @@ Current verification used the actual user-supplied San Diego County Plan F PDF, 
 | --- | --- |
 | TypeScript | Passed |
 | ESLint | Passed without warnings |
-| TypeScript unit tests | 131 passed, including private browser access/session/origin checks |
+| TypeScript unit tests | 151 passed, including private browser access/session/origin and portable extraction/report checks |
 | Live Supabase integration | 1 explicitly skipped; credentials absent |
 | Python processor/benchmark tests | 23 passed, including rotated/cropped pages, OCR fallback, fractions, unknown dimensions, and source identity |
 | Playwright | 4 passed; includes the actual14-page PDF workflow |
@@ -61,3 +61,13 @@ The full local browser workflow was rerun after the access changes: all four Pla
 Codespaces lifecycle tests (`bash scripts/codespaces-test.sh`) passed four explicitly simulated provider/CLI scenarios: private success, restricted automatic token with stored-login fallback, total authentication failure, and public-port refusal. A fresh isolated installation passed locked npm installation, PDF.js worker generation, Python 3.12 and pinned PyMuPDF installation. Shell syntax and JSON configuration checks passed. A local Docker base-image build was attempted but the cloud network returned 403 for Microsoft's registry CDN (`centralus.data.mcr.microsoft.com`), before container build execution; an allowlist addition was saved for review. No TLS or integrity verification was disabled.
 
 These checks do not establish a running GitHub Codespace or a completed container build. Creation, quota availability, and private-port login require the user's GitHub account and remain unverified until the launch link is used. See [browser setup](CODESPACES.md).
+
+## Downloadable interactive prototype
+
+The easier delivery is a self-contained HTML application, published separately in branch `prototype-browser`. It embeds the actual A1 source-sheet excerpt, PDF.js/worker/decoder/font resources, React UI and browser storage adapter. It loads and analyzes real source bytes; no fixture results populate extraction. No account, server or API key is required after downloading.
+
+Three new Chromium tests passed, exercising annotations, source boxes, human correction, reload persistence, full 14-page upload and selected-page extraction, delete, temporary mode, zero external requests and PDF export while offline. The original four full-stack browser tests also passed after shared component changes. All 151 unit tests, type checking, linting and the production build passed; the optional live-Supabase test remains skipped.
+
+The actual downloaded HTML also passed a `file://` WebKit test with browser sandbox/security unchanged: 65 annotations, correction/original retention, zero active code rules, structured JSON and a valid nine-page report with the source drawing. The final run had zero page errors, decoder warnings or network requests. WebKit local-file storage rejected actual File persistence despite accepting metadata, so startup now tests File write/read capability and explicitly selects a visible temporary session when unsupported. Temporary mode does not promise persistence; export before closing. A missing OpenJPEG decoder discovered in the first test was embedded and retested successfully. ICC color fidelity remains limited by PDF.js's offline binary-loading path.
+
+Chromium's administrator policy blocks local-file navigation in this environment; no policy was disabled, and direct Chrome/Edge file launch is not claimed as tested here. Chromium's app workflow was tested from an internal static server, and actual local-file launch was tested with WebKit. See [portable prototype](../prototype/README.md).

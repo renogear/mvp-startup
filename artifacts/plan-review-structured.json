@@ -1,7 +1,7 @@
 {
   "review": {
-    "id": "659536ee-7e1f-4f0c-b018-f93d87bd7c93",
-    "ownerId": "cc243114-0861-4a80-9db4-382c44a52e4d",
+    "id": "5f87ce8a-b8cb-47d0-8b01-a75fb4f88725",
+    "ownerId": "5aa3e276-9001-4db0-906a-80ef0fd73db1",
     "organizationId": null,
     "projectId": null,
     "documentId": null,
@@ -22,21 +22,21 @@
       "sourceUrl": "https://www.sandiegocounty.gov/content/dam/sdc/pds/bldg/adu_info/pds671_11x17.pdf"
     },
     "pageCount": 14,
-    "createdAt": "2026-10-19T07:49:24.931Z"
+    "createdAt": "2026-10-19T08:30:15.490Z"
   },
   "job": {
-    "id": "1b70bfea-8533-4c6e-b995-8f7a9308fc88",
-    "reviewId": "659536ee-7e1f-4f0c-b018-f93d87bd7c93",
+    "id": "204f6382-190d-4c95-98a9-3d616f2ee888",
+    "reviewId": "5f87ce8a-b8cb-47d0-8b01-a75fb4f88725",
     "page": 5,
     "state": "complete",
     "attempts": 1,
-    "createdAt": "2026-10-19T07:49:27.419Z",
-    "startedAt": "2026-10-19T07:49:28.145Z",
-    "finishedAt": "2026-10-19T07:49:30.374Z",
+    "createdAt": "2026-10-19T08:30:17.018Z",
+    "startedAt": "2026-10-19T08:30:17.115Z",
+    "finishedAt": "2026-10-19T08:30:18.948Z",
     "error": null,
     "result": {
       "schemaVersion": "1.0",
-      "documentId": "659536ee-7e1f-4f0c-b018-f93d87bd7c93",
+      "documentId": "5f87ce8a-b8cb-47d0-8b01-a75fb4f88725",
       "sourceSha256": "89dbbd8f7977d772df44a4eea1a0ec35d795d9830538e3aa1e29f8d5bfe10bdc",
       "pageCount": 14,
       "page": {
@@ -30058,7 +30058,7 @@
       },
       "elements": [
         {
-          "id": "59c575e97fe141d508f3599e",
+          "id": "2ee61cd081f79df2d6b14c67",
           "kind": "dimension",
           "label": "28'-7\"",
           "bbox": {
@@ -30080,7 +30080,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "eda4ddb92891a65c4d9186e3",
+          "id": "f1468697df98601f7fcd3c52",
           "kind": "dimension",
           "label": "10'-8\"",
           "bbox": {
@@ -30102,7 +30102,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "fead4392acbe445c1b4a5dd9",
+          "id": "022dd3a34974415642485263",
           "kind": "dimension",
           "label": "1'-10\"",
           "bbox": {
@@ -30124,7 +30124,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "bb09b71683a69264d6763a92",
+          "id": "4d7087b2f3d49d200fd9d71c",
           "kind": "dimension",
           "label": "3'-0\"",
           "bbox": {
@@ -30146,7 +30146,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "31a2662d9d180ef7aa30abfa",
+          "id": "b95f8d68824ea1c18f083dbe",
           "kind": "dimension",
           "label": "5'-1\"",
           "bbox": {
@@ -30168,7 +30168,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "2929019d83872dd00e9d483e",
+          "id": "39f265fdeb0d7c1c0fe9e273",
           "kind": "dimension",
           "label": "8'-0\"",
           "bbox": {
@@ -30190,7 +30190,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "e23727e54131b2f91bcb911c",
+          "id": "d9dbc151172aa5aed75b1d3a",
           "kind": "dimension",
           "label": "1'-6\"",
           "bbox": {
@@ -30212,7 +30212,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "21dff50975b03d504399299a",
+          "id": "5a4ac184bb65898020d66109",
           "kind": "dimension",
           "label": "2'-6\"",
           "bbox": {
@@ -30234,7 +30234,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "842d65f986d772e8e25eda25",
+          "id": "3e7621a716a7f944d16152dc",
           "kind": "room_label",
           "label": "CLOSET",
           "bbox": {
@@ -30251,7 +30251,7 @@
           "context": "label_only_boundary_unknown"
         },
         {
-          "id": "89b65637ae7532910f95de35",
+          "id": "c03ed0099aa0643e8b038ac0",
           "kind": "dimension",
           "label": "4'-0\"",
           "bbox": {
@@ -30273,7 +30273,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "a7bb9c903d152a57f9e1ff18",
+          "id": "49101545eddd4e2ade6d725c",
           "kind": "dimension",
           "label": "3'-6\"",
           "bbox": {
@@ -30295,7 +30295,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "ed501dc1f35f87870b2dfffa",
+          "id": "f24dcc7f18bde7caac93c2e8",
           "kind": "dimension",
           "label": "72\"",
           "bbox": {
@@ -30317,7 +30317,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "89c30aec00d7ae12046dd69e",
+          "id": "3ca2c28a0f6ddba0ff6f48a7",
           "kind": "dimension",
           "label": "30\"",
           "bbox": {
@@ -30339,7 +30339,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "0282c4551cb6816a5cf73085",
+          "id": "0f289aa2325057c26798629a",
           "kind": "dimension",
           "label": "8'-0\"",
           "bbox": {
@@ -30361,7 +30361,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "17aac0d9fa17fa52ccf5057c",
+          "id": "04df8ee82e571511da8df275",
           "kind": "dimension",
           "label": "2'-0\"",
           "bbox": {
@@ -30383,7 +30383,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "41cce310a89595f4ff5054a5",
+          "id": "9be54dd5ee9c5e3113556a9a",
           "kind": "dimension",
           "label": "6'-10\"",
           "bbox": {
@@ -30405,7 +30405,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "0d080800aad2b691025772bc",
+          "id": "4c879096ae699e494e72ee22",
           "kind": "room_label",
           "label": "KITCHEN",
           "bbox": {
@@ -30422,7 +30422,7 @@
           "context": "label_only_boundary_unknown"
         },
         {
-          "id": "bea8ceccb10dd1fb16fc5c78",
+          "id": "5cd5a09271ac95c904323f79",
           "kind": "dimension",
           "label": "9'-10\"",
           "bbox": {
@@ -30444,7 +30444,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "b48bc927fcc15e2bce648318",
+          "id": "2951ced068bfc45c5f3942ee",
           "kind": "dimension",
           "label": "3'-0\"",
           "bbox": {
@@ -30466,7 +30466,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "82d902b9f1b97f66ef7358ab",
+          "id": "17451affdb030dc3eb31d8bc",
           "kind": "room_label",
           "label": "BEDROOM",
           "bbox": {
@@ -30483,7 +30483,7 @@
           "context": "label_only_boundary_unknown"
         },
         {
-          "id": "aa481610ed9b6fed39d31615",
+          "id": "1373a5f2e1ab9ad4477bd26e",
           "kind": "dimension",
           "label": "10'-7\"",
           "bbox": {
@@ -30505,7 +30505,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "54b193f61ae4314ddc38c37a",
+          "id": "48081d44c1b7ea8b51e48fdc",
           "kind": "dimension",
           "label": "9'-10\"",
           "bbox": {
@@ -30527,7 +30527,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "f8825d9c965fdfd3ed9f3f93",
+          "id": "a49cd281e5a2b4bf25d62db2",
           "kind": "room_label",
           "label": "BATH",
           "bbox": {
@@ -30544,7 +30544,7 @@
           "context": "label_only_boundary_unknown"
         },
         {
-          "id": "50500e4e89f958842aa46e07",
+          "id": "83dfb68cd18b5c238200ba5c",
           "kind": "dimension",
           "label": "8'-0\"",
           "bbox": {
@@ -30566,7 +30566,7 @@
           "context": "printed_ceiling_height"
         },
         {
-          "id": "c8a5583b07d2073fb1f49a69",
+          "id": "9f6250bd72c72d09f2c9f78b",
           "kind": "dimension",
           "label": "10'-2\"",
           "bbox": {
@@ -30588,7 +30588,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "82adb8e360cdf341f229d56e",
+          "id": "1b37b600b90a9749b1b2d21b",
           "kind": "dimension",
           "label": "9'-10\"",
           "bbox": {
@@ -30610,7 +30610,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "1a01ecc980ba1ecdca07d2eb",
+          "id": "26ba9990db97e32d38efd86a",
           "kind": "dimension",
           "label": "6'-0\"",
           "bbox": {
@@ -30632,7 +30632,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "609155d053a5ed697fec4db6",
+          "id": "edcf59e6bbcc8f2cac70162a",
           "kind": "dimension",
           "label": "9'-6\"",
           "bbox": {
@@ -30654,7 +30654,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "74b394e6acfac85e1ef87cb6",
+          "id": "b6833bb175564a3ca7b68174",
           "kind": "dimension",
           "label": "9'-6\"",
           "bbox": {
@@ -30676,7 +30676,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "0ecbca44b37d618b6c796f7e",
+          "id": "ff72c32f0ed677322a01d325",
           "kind": "dimension",
           "label": "8'-0\"",
           "bbox": {
@@ -30698,7 +30698,7 @@
           "context": "printed_ceiling_height"
         },
         {
-          "id": "7f1aaded121a3f1aaed5a2d3",
+          "id": "0908db869ea66e1f6bf978df",
           "kind": "dimension",
           "label": "8'-0\"",
           "bbox": {
@@ -30720,7 +30720,7 @@
           "context": "printed_ceiling_height"
         },
         {
-          "id": "c3749efe1a3d8ef71d4f7737",
+          "id": "56ef0c0a89c4d8286359d383",
           "kind": "dimension",
           "label": "2'-8\"",
           "bbox": {
@@ -30742,7 +30742,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "376c8d97c58760feacfd264f",
+          "id": "a30fe40961da04ab6882cd08",
           "kind": "dimension",
           "label": "1'-6\"",
           "bbox": {
@@ -30764,7 +30764,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "14d89973a42ffbd0feb5a7d1",
+          "id": "bb11fa99c2e465be57162fb8",
           "kind": "dimension",
           "label": "1'-4\"",
           "bbox": {
@@ -30786,7 +30786,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "0b15226c16895b2324a43b88",
+          "id": "7850ff3f7e5109ad4af9bd5c",
           "kind": "dimension",
           "label": "21'-0\"",
           "bbox": {
@@ -30808,7 +30808,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "5e247be0baef110c74b497bd",
+          "id": "087cb4eb4a9697c338ee644f",
           "kind": "dimension",
           "label": "4'-0\"",
           "bbox": {
@@ -30830,7 +30830,7 @@
           "context": "printed_height_annotation"
         },
         {
-          "id": "1128cd047b11fede1200dbf5",
+          "id": "b5ebe4d5056cf65ff9632ae2",
           "kind": "dimension",
           "label": "6'-10\"",
           "bbox": {
@@ -30852,7 +30852,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "0c8a0175757c5d26bfa5f088",
+          "id": "89a5ebf18e07335a6c0d5bf9",
           "kind": "dimension",
           "label": "4'-0\"",
           "bbox": {
@@ -30874,7 +30874,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "d6d97c03493ec48c88810937",
+          "id": "4cc711a11e775dac34e5d1b1",
           "kind": "room_label",
           "label": "DINING ROOM",
           "bbox": {
@@ -30891,7 +30891,7 @@
           "context": "label_only_boundary_unknown"
         },
         {
-          "id": "8ce4369e8a100a86c27427e4",
+          "id": "ed9b31a08318e224d8136757",
           "kind": "dimension",
           "label": "4'-0\"",
           "bbox": {
@@ -30913,7 +30913,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "051c673b4473f961c256a9c3",
+          "id": "891cddf4b548021deb1d0309",
           "kind": "dimension",
           "label": "8'-7\"",
           "bbox": {
@@ -30935,7 +30935,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "5f6c12963fa43d46263af9f5",
+          "id": "0ef7fdbe0b428ca67f573ead",
           "kind": "dimension",
           "label": "10'-2\"",
           "bbox": {
@@ -30957,7 +30957,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "732dfeb77e6880b84ea859f2",
+          "id": "ca0b645db6c8836e3732efc9",
           "kind": "room_label",
           "label": "LIVING ROOM",
           "bbox": {
@@ -30974,7 +30974,7 @@
           "context": "label_only_boundary_unknown"
         },
         {
-          "id": "0551f1a76c4f89e416478c9b",
+          "id": "dcb38c4590a456ac808fc677",
           "kind": "dimension",
           "label": "8'-0\"",
           "bbox": {
@@ -30996,7 +30996,7 @@
           "context": "printed_ceiling_height"
         },
         {
-          "id": "fce3170fe1fe42d47a9729ff",
+          "id": "a53b9590b16f953f61f5863b",
           "kind": "dimension",
           "label": "19'-0\"",
           "bbox": {
@@ -31018,7 +31018,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "9b31d727c2732229f83d9b12",
+          "id": "863f0c69b4ee6a5136759110",
           "kind": "dimension",
           "label": "10'-2\"",
           "bbox": {
@@ -31040,7 +31040,7 @@
           "context": "printed_dimension_pair_not_geometric_measurement"
         },
         {
-          "id": "22581ff718381bc92b242036",
+          "id": "2810d6d0d5cf4ab5157aab05",
           "kind": "dimension",
           "label": "8'-0\"",
           "bbox": {
@@ -31062,7 +31062,7 @@
           "context": "printed_ceiling_height"
         },
         {
-          "id": "70357d0a43cfa391574eaf69",
+          "id": "7fdc02fe5b000f6285f55de9",
           "kind": "dimension",
           "label": "6'-0\"",
           "bbox": {
@@ -31084,7 +31084,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "e1f5394159982a341310a3a0",
+          "id": "0c0345420c8d8c3bac037071",
           "kind": "dimension",
           "label": "5'-0\"",
           "bbox": {
@@ -31106,7 +31106,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "8e0543e751830edeae402260",
+          "id": "81845aa758b09c6941ecdc07",
           "kind": "dimension",
           "label": "4'-0\"",
           "bbox": {
@@ -31128,7 +31128,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "0c7560f68bba6f1826968edf",
+          "id": "2b7820b58d43b3d72037a33d",
           "kind": "dimension",
           "label": "4'-0\"",
           "bbox": {
@@ -31150,7 +31150,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "21ab9544eabf187c78af5be4",
+          "id": "41e63953acc35f3037892400",
           "kind": "dimension",
           "label": "10'-0\"",
           "bbox": {
@@ -31172,7 +31172,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "463037cdeff9ca826a890a6f",
+          "id": "b44fc2602600f4bf7673ee41",
           "kind": "dimension",
           "label": "3'-0\"",
           "bbox": {
@@ -31194,7 +31194,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "6f6026e2e8725c8245b752b2",
+          "id": "f7973371dfb8ba4007e61d57",
           "kind": "dimension",
           "label": "4'-0\"",
           "bbox": {
@@ -31216,7 +31216,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "81690d1ddaaee7401e5ec9ea",
+          "id": "01f78fc66187caa04cc0cfd8",
           "kind": "dimension",
           "label": "1'-7\"",
           "bbox": {
@@ -31238,7 +31238,7 @@
           "context": "printed_dimension_unassociated"
         },
         {
-          "id": "5a64826c97658a2c8438c469",
+          "id": "97b9c36ad622cb48fc04a866",
           "kind": "window_schedule",
           "label": "Window A: A | 3'-0\" x 4'-0\" | SLIDING",
           "bbox": {
@@ -31263,7 +31263,7 @@
           "context": "schedule_row_not_physical_location"
         },
         {
-          "id": "ec4f4c3224ae902f23c4be40",
+          "id": "c45ca5417d22cd05d4f0a69a",
           "kind": "door_schedule",
           "label": "Door 1: 1 | 3'-0\" x 6'-8\" | SWINGING | 1-3/8\" SOLID CORE",
           "bbox": {
@@ -31290,7 +31290,7 @@
           "context": "schedule_row_not_physical_location"
         },
         {
-          "id": "533e6d08b6187e004454e0d3",
+          "id": "fec198744c16efed51d549d0",
           "kind": "window_schedule",
           "label": "Window B: B | 4'-0\" x 4'-0\" | SLIDING",
           "bbox": {
@@ -31315,7 +31315,7 @@
           "context": "schedule_row_not_physical_location"
         },
         {
-          "id": "0752f23570fbaaae01467512",
+          "id": "dad912dbe2743ab68626b8c5",
           "kind": "door_schedule",
           "label": "Door 2: 2 | 3'-0\" x 6'-8\" | SWINGING",
           "bbox": {
@@ -31340,7 +31340,7 @@
           "context": "schedule_row_not_physical_location"
         },
         {
-          "id": "5b2e03402a10b39cf6fbdebe",
+          "id": "db917a8f49c0e89efb0dce42",
           "kind": "window_schedule",
           "label": "Window C: C | 2'-0\" x 3'-0\" | SLIDING | Y",
           "bbox": {
@@ -31367,7 +31367,7 @@
           "context": "schedule_row_not_physical_location"
         },
         {
-          "id": "f318b19da22368d55081165b",
+          "id": "16c5d726683df9398ef3ed8f",
           "kind": "door_schedule",
           "label": "Door 3: 3 | BI-FOLD | LAUNDRY ROOM",
           "bbox": {
@@ -31392,7 +31392,7 @@
           "context": "schedule_row_not_physical_location"
         },
         {
-          "id": "8c0785e4e234123cdf6916a3",
+          "id": "dd722d0f6bbc96219824d745",
           "kind": "window_schedule",
           "label": "Window D: D | 3'-0\" x 2'-0\" | SLIDING | Y",
           "bbox": {
@@ -31419,7 +31419,7 @@
           "context": "schedule_row_not_physical_location"
         },
         {
-          "id": "0e3098caff33aa779ae6961c",
+          "id": "ad6fc556bddebe86c4f027b5",
           "kind": "door_schedule",
           "label": "Door 4: 4 | 8'-0\" x 6'-8\" | SLIDING | 6FT CLOSET",
           "bbox": {
@@ -31446,7 +31446,7 @@
           "context": "schedule_row_not_physical_location"
         },
         {
-          "id": "75fd7d0918904bf81d065056",
+          "id": "1dbfde90e14a1b44357207c0",
           "kind": "annotation",
           "label": "1- 1/4 INCHES",
           "bbox": {
@@ -31468,7 +31468,7 @@
           "context": "note_text_not_geometric_measurement"
         },
         {
-          "id": "f54bb8fc0b108314221ecac2",
+          "id": "5f3dac2d4b35274a1530ed6d",
           "kind": "scale",
           "label": "1/4\" = 1'-0\"",
           "bbox": {
@@ -33803,7 +33803,7 @@
         "Images occur on this page. OCR of image-only regions was not run because embedded text is available; text inside images may be missed."
       ],
       "metrics": {
-        "processingMs": 1897.11,
+        "processingMs": 1609.33,
         "textSpanCount": 210,
         "embeddedTextSpanCount": 210,
         "ocrTextSpanCount": 0,
@@ -33817,26 +33817,26 @@
   },
   "corrections": [
     {
-      "elementId": "82d902b9f1b97f66ef7358ab",
+      "elementId": "17451affdb030dc3eb31d8bc",
       "label": "BEDROOM",
       "kind": "room_label",
       "status": "confirmed",
       "value": null,
       "unit": "in",
       "note": "Confirmed the BEDROOM label against the printed source drawing. This confirms text only.",
-      "id": "d4ab2f97-6872-4d08-b333-a464795db7b4",
-      "createdAt": "2026-10-19T07:49:32.399Z"
+      "id": "a4cd11a7-fe64-4b6c-baa5-130e4bad98b9",
+      "createdAt": "2026-10-19T08:30:20.391Z"
     },
     {
-      "elementId": "59c575e97fe141d508f3599e",
+      "elementId": "2ee61cd081f79df2d6b14c67",
       "label": "28'-7\"",
       "kind": "dimension",
       "status": "corrected",
       "value": 343,
       "unit": "in",
       "note": "TEST: re-expressed the printed dimension in a different unit to validate correction persistence. No new measurement or technical compliance is asserted.",
-      "id": "c99a0719-8f87-481b-996f-9f832f5c8d3e",
-      "createdAt": "2026-10-19T07:49:33.266Z"
+      "id": "a18f3b19-7142-4b24-bf1a-2bc9f809f6dc",
+      "createdAt": "2026-10-19T08:30:21.344Z"
     }
   ],
   "compliance": {
@@ -33880,5 +33880,8 @@
       }
     },
     "reason": "No independently verified applicable rule set is active."
+  },
+  "storage": {
+    "mode": "server"
   }
 }

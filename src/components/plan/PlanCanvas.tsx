@@ -19,6 +19,7 @@ import type {
   RenderTask,
 } from "pdfjs-dist";
 import type { Element } from "@/lib/plan/schema";
+import { browserPdfOptions } from "@/lib/plan/browser-pdf-assets";
 import "./plan-canvas.css";
 
 type Props = {
@@ -165,7 +166,10 @@ export function PlanCanvas({
           const pdfjs = await import("pdfjs-dist");
           if (disposed) return;
           pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
-          loadingTask = pdfjs.getDocument({ data: new Uint8Array(bytes) });
+          loadingTask = pdfjs.getDocument({
+            ...browserPdfOptions(),
+            data: new Uint8Array(bytes),
+          });
           const document = await loadingTask.promise;
           if (!disposed) {
             setFailure(null);

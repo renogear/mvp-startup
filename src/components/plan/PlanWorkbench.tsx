@@ -57,21 +57,37 @@ const classifications = [
   ["structural", "Structural alteration"],
   ["other", "Other residential"],
 ] as const;
-async function call(url: string, options?: RequestInit) {
-  const response = await fetch(url, options);
-  const data = await response.json();
-  if (!response.ok)
-    throw new Error(data.error || "The operation could not be completed.");
-  return data;
-}
-
-export default function PlanWorkbench() {
+export type WorkbenchTransport = {
+  fetch: (url: string, options?: RequestInit) => Promise<Response>;
+  fileUrl: (reviewId: string) => string;
+  storageMode?: "persistent" | "temporary";
+};
+export default function PlanWorkbench({
+  transport,
+  initialReviewId,
+}: {
+  transport?: WorkbenchTransport;
+  initialReviewId?: string | null;
+} = {}) {
+  const request = transport?.fetch || fetch;
+  const standalone = Boolean(transport);
+  const call = useCallback(
+    async (url: string, options?: RequestInit) => {
+      const response = await request(url, options);
+      const data = await response.json();
+      if (!response.ok)
+        throw new Error(data.error || "The operation could not be completed.");
+      return data;
+    },
+    [request],
+  );
   const [session, setSession] = useState<{
       enabled: boolean;
       authenticated: boolean;
       cloudConfigured: boolean;
       aiConfigured: boolean;
-      mode: "disabled" | "local-workstation" | "private-codespace";
+      mode:
+        "disabled" | "local-workstation" | "private-codespace" | "browser-only";
     } | null>(null),
     [reviews, setReviews] = useState<Review[]>([]),
     [detail, setDetail] = useState<Detail | null>(null),
@@ -93,33 +109,36 @@ export default function PlanWorkbench() {
   const list = useCallback(async () => {
     const data = await call("/api/plans");
     setReviews(data.reviews);
-  }, []);
-  const open = useCallback(async (id: string, retain = false) => {
-    const data: Detail = await call("/api/plans/" + id);
-    setDetail(data);
-    if (
-      retain &&
-      data.jobs.some((j) => j.state === "complete") &&
-      !data.jobs.some((j) => j.state === "queued" || j.state === "processing")
-    )
-      setNotice((old) =>
-        old.startsWith("Page queued.")
-          ? "Extraction completed. Review each candidate against the original drawing."
-          : old,
-      );
-    if (!retain) {
-      setContext(data.review.context);
-      setPage(data.jobs[0]?.page || 1);
-      setSelectedId(null);
-      setPanel("elements");
-    }
-    return data;
-  }, []);
+  }, [call]);
+  const open = useCallback(
+    async (id: string, retain = false) => {
+      const data: Detail = await call("/api/plans/" + id);
+      setDetail(data);
+      if (
+        retain &&
+        data.jobs.some((j) => j.state === "complete") &&
+        !data.jobs.some((j) => j.state === "queued" || j.state === "processing")
+      )
+        setNotice((old) =>
+          old.startsWith("Page queued.")
+            ? "Extraction completed. Review each candidate against the original drawing."
+            : old,
+        );
+      if (!retain) {
+        setContext(data.review.context);
+        setPage(data.jobs[0]?.page || 1);
+        setSelectedId(null);
+        setPanel("elements");
+      }
+      return data;
+    },
+    [call],
+  );
   useEffect(() => {
     let active = true;
     let retry: ReturnType<typeof setTimeout> | undefined;
     const load = () =>
-      fetch("/api/plans/session")
+      request("/api/plans/session")
         .then((r) => {
           if (!r.ok)
             throw new Error("Workspace session is temporarily unavailable.");
@@ -128,7 +147,10 @@ export default function PlanWorkbench() {
         .then(async (data) => {
           if (!active) return;
           setSession(data);
-          if (data.authenticated) await list();
+          if (data.authenticated) {
+            await list();
+            if (initialReviewId) await open(initialReviewId);
+          }
           if (data.mode === "private-codespace" && !data.enabled)
             retry = setTimeout(load, 4000);
         })
@@ -142,7 +164,7 @@ export default function PlanWorkbench() {
       active = false;
       clearTimeout(retry);
     };
-  }, [list]);
+  }, [request, list, open, initialReviewId]);
   const pending = Boolean(
     detail?.jobs.some((j) => j.state === "queued" || j.state === "processing"),
   );
@@ -288,7 +310,7 @@ export default function PlanWorkbench() {
     setBusy(true);
     setError("");
     try {
-      const response = await fetch(
+      const response = await request(
         `/api/plans/${detail.review.id}/report?job=${job.id}`,
       );
       if (!response.ok) throw new Error((await response.json()).error);
@@ -318,6 +340,7 @@ export default function PlanWorkbench() {
                 reason:
                   "No independently verified applicable rule set is active.",
               },
+              storage: { mode: transport?.storageMode || "server" },
             },
             null,
             2,
@@ -335,7 +358,16 @@ export default function PlanWorkbench() {
     <div className="review-app">
       <header className="review-header">
         <Link
-          href="/projects"
+          href={standalone ? "#" : "/projects"}
+          onClick={
+            standalone
+              ? (event) => {
+                  event.preventDefault();
+                  setDetail(null);
+                  setCreating(false);
+                }
+              : undefined
+          }
           className="review-logo"
           aria-label="PermitPilot projects"
         >
@@ -357,10 +389,25 @@ export default function PlanWorkbench() {
         <div className="review-header-end">
           <span className="local-label">
             <span />
-            {browserWorkspace ? "BROWSER WORKSPACE" : "LOCAL WORKBENCH"}
+            {standalone
+              ? "BROWSER PROTOTYPE"
+              : browserWorkspace
+                ? "BROWSER WORKSPACE"
+                : "LOCAL WORKBENCH"}
           </span>
-          <Link href="/projects">
-            Projects <ArrowRight size={13} />
+          <Link
+            href={standalone ? "#" : "/projects"}
+            onClick={
+              standalone
+                ? (event) => {
+                    event.preventDefault();
+                    setDetail(null);
+                    setCreating(false);
+                  }
+                : undefined
+            }
+          >
+            {standalone ? "All reviews" : "Projects"} <ArrowRight size={13} />
           </Link>
         </div>
       </header>
@@ -594,8 +641,11 @@ export default function PlanWorkbench() {
             )}
           </div>
           <p className="fineprint">
-            Local files are private to this browser session. Keep the local data
-            directory when restarting the application.
+            {standalone
+              ? transport?.storageMode === "temporary"
+                ? "This review is temporary because browser storage is blocked. Export your work before closing this tab."
+                : "Drawings and corrections are saved in this browser. Export your work before clearing browser storage. Processing runs while this tab is open."
+              : "Keep the private data directory and browser cookie when restarting the application."}
           </p>
         </div>
       ) : (
@@ -687,7 +737,11 @@ export default function PlanWorkbench() {
                 </label>
               </div>
               <PlanCanvas
-                src={`/api/plans/${detail.review.id}/file`}
+                src={
+                  transport
+                    ? transport.fileUrl(detail.review.id)
+                    : `/api/plans/${detail.review.id}/file`
+                }
                 mime={detail.review.mime}
                 page={page}
                 onPageChange={(n) => {
@@ -847,7 +901,9 @@ export default function PlanWorkbench() {
                       <div>
                         <strong>
                           {job.state === "queued"
-                            ? "Waiting for the document worker"
+                            ? standalone
+                              ? "Preparing extraction in your browser"
+                              : "Waiting for the document worker"
                             : "Extracting selected page"}
                         </strong>
                         <p>
@@ -941,9 +997,11 @@ export default function PlanWorkbench() {
                       <strong>Deterministic extraction</strong>
                       <p>
                         Printed text and spatial candidates only.{" "}
-                        {session.aiConfigured
-                          ? "AI credentials are present; this baseline does not invoke AI interpretation."
-                          : "AI interpretation is unavailable; no OpenAI key is configured."}{" "}
+                        {standalone
+                          ? "This prototype reads embedded PDF text on your device; scanned text remains unknown."
+                          : session.aiConfigured
+                            ? "AI credentials are present; this baseline does not invoke AI interpretation."
+                            : "AI interpretation is unavailable; no OpenAI key is configured."}{" "}
                         No inferred room boundaries or technical compliance
                         claims.
                       </p>

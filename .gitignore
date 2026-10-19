@@ -49,5 +49,6 @@ next-env.d.ts
 /public/pdf.worker.min.mjs
 
 /.venv/
+/prototype/dist/
 **/__pycache__/
 *.pyc
