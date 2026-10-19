@@ -1,0 +1,20 @@
+{
+  "id": "11111111-1111-4111-8111-111111111111",
+  "name": "DEMO \u2014 Oak Street renovation",
+  "address": "123 Example Street",
+  "city": "San Jose",
+  "state": "CA",
+  "zip": "95112",
+  "propertyType": "Single-family",
+  "categories": [
+    "Kitchen / bathroom remodel",
+    "HVAC / mechanical"
+  ],
+  "description": "Fictional project for interface testing: renovate a kitchen and replace existing heating equipment.",
+  "details": "Demo data only. Not a real property or permit record.",
+  "jurisdiction": "san-jose",
+  "confirmed": false,
+  "documents": [],
+  "checklist": [],
+  "created_at": "2026-10-19T00:00:00.000Z"
+}

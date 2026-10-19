@@ -1,0 +1,39 @@
+{
+  "name": "PermitPilot interactive workbench",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24",
+      "nodeGypDependencies": false
+    }
+  },
+  "remoteUser": "vscode",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "PermitPilot — private plan workbench",
+      "onAutoForward": "openBrowser",
+      "protocol": "http",
+      "requireLocalPort": false
+    }
+  },
+  "postCreateCommand": "bash scripts/codespaces-install.sh",
+  "postStartCommand": "bash scripts/codespaces-start.sh",
+  "waitFor": "postCreateCommand",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "32gb"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["docs/CODESPACES.md"]
+    },
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  }
+}

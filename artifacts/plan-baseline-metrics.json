@@ -1,0 +1,506 @@
+{
+  "schemaVersion": "1.0.0",
+  "fixture": "county-san-diego-plan-f-a1-user-supplied",
+  "sourceSha256": "89dbbd8f7977d772df44a4eea1a0ec35d795d9830538e3aa1e29f8d5bfe10bdc",
+  "page": 5,
+  "method": "One-to-one printed-label measurement matching by numeric inches and approximate location, not feature geometry validation.",
+  "reviewQualification": "Not a licensed professional review or authoritative regulatory verification.",
+  "allExtractedCandidateKinds": {
+    "dimension": 49,
+    "room_label": 6,
+    "window_schedule": 4,
+    "door_schedule": 4,
+    "annotation": 1,
+    "scale": 1
+  },
+  "unscoredAnnotationCandidatesForManualReview": [
+    {
+      "id": "82749d05cd248875ed743a98",
+      "kind": "annotation",
+      "label": "1- 1/4 INCHES",
+      "bbox": {
+        "x": 0.4685397,
+        "y": 0.9046796,
+        "width": 0.2107817,
+        "height": 0.0081265
+      },
+      "originalValue": {
+        "value": 1.25,
+        "unit": "in",
+        "inches": 1.25
+      },
+      "method": "embedded_text"
+    }
+  ],
+  "dimensions": {
+    "expected": 49,
+    "candidatesInAnnotatedRegion": 49,
+    "matched": 49,
+    "recall": 1.0,
+    "precisionWithinAnnotatedRegion": 1.0,
+    "precisionScope": "All 49 dimension tokens in the floor-plan drawing region: exterior/interior dimension chains, room dimensions, ceiling labels, shower dimensions, and pony-wall maximum-height annotation. Excludes schedule dimensions, wall construction labels, scale ratios, right-side general notes, and note prose below schedules.",
+    "groups": {
+      "ceiling_label": {
+        "expected": 5,
+        "matched": 5
+      },
+      "dimension_chain": {
+        "expected": 23,
+        "matched": 23
+      },
+      "fixture_label": {
+        "expected": 2,
+        "matched": 2
+      },
+      "interior_dimension": {
+        "expected": 8,
+        "matched": 8
+      },
+      "limit_annotation": {
+        "expected": 1,
+        "matched": 1
+      },
+      "room_dimension": {
+        "expected": 10,
+        "matched": 10
+      }
+    },
+    "matches": [
+      {
+        "expectedId": "top-total",
+        "elementId": "da013c42e51611737a64f154"
+      },
+      {
+        "expectedId": "top-1",
+        "elementId": "6905fe306351687d9f8d3a1c"
+      },
+      {
+        "expectedId": "top-2",
+        "elementId": "aa866fe445d3160b79aeeef9"
+      },
+      {
+        "expectedId": "top-3",
+        "elementId": "1490919820ab45c0de21ca2c"
+      },
+      {
+        "expectedId": "top-4",
+        "elementId": "87676a9e6d0672fd0d27cfb1"
+      },
+      {
+        "expectedId": "top-5",
+        "elementId": "52a063e723dd175cd81fe40e"
+      },
+      {
+        "expectedId": "left-1",
+        "elementId": "a49d7a0e73d3f7c3ca874819"
+      },
+      {
+        "expectedId": "left-2",
+        "elementId": "932da5ac9e91e47b93783863"
+      },
+      {
+        "expectedId": "left-3",
+        "elementId": "a6492f2ca63d4591b86a0e83"
+      },
+      {
+        "expectedId": "left-4",
+        "elementId": "d3878b5d566ed5a85b92817a"
+      },
+      {
+        "expectedId": "right-1",
+        "elementId": "b119f780c54903dcfddfadb6"
+      },
+      {
+        "expectedId": "right-2",
+        "elementId": "83ee2518f141e885c5643013"
+      },
+      {
+        "expectedId": "right-3",
+        "elementId": "06f0d82589571a4415bce4f4"
+      },
+      {
+        "expectedId": "right-4",
+        "elementId": "34f791b03a688f3ec1feab44"
+      },
+      {
+        "expectedId": "right-5",
+        "elementId": "6230f1514e46ee6202548e24"
+      },
+      {
+        "expectedId": "right-6",
+        "elementId": "d07796f21b39389c1f2984f3"
+      },
+      {
+        "expectedId": "right-total",
+        "elementId": "e2da6f4cc067bab43e2eb272"
+      },
+      {
+        "expectedId": "bottom-1",
+        "elementId": "6176aed357f4269243d731d3"
+      },
+      {
+        "expectedId": "bottom-2",
+        "elementId": "8bedb541c60da4d24c6bcf9c"
+      },
+      {
+        "expectedId": "bottom-3",
+        "elementId": "51554087952055dd102f820e"
+      },
+      {
+        "expectedId": "bottom-4",
+        "elementId": "a425357dd70c469bb91a1a36"
+      },
+      {
+        "expectedId": "bottom-5",
+        "elementId": "a61fd4aab834aa5492fd4c6b"
+      },
+      {
+        "expectedId": "bottom-6",
+        "elementId": "ca9f99f3e7f3e10a53318db5"
+      },
+      {
+        "expectedId": "closet-width",
+        "elementId": "0958b0673e31ea2a1342e691"
+      },
+      {
+        "expectedId": "bath-left-chain",
+        "elementId": "2f85a3b758ab9fa429d26dc1"
+      },
+      {
+        "expectedId": "bedroom-interior-chain",
+        "elementId": "4ef94bb544256f39ace64e01"
+      },
+      {
+        "expectedId": "shower-side-chain",
+        "elementId": "365a9a9c00d982f9b2228a73"
+      },
+      {
+        "expectedId": "vanity-upper-chain",
+        "elementId": "91c2c8e5fe2f0460a5feee14"
+      },
+      {
+        "expectedId": "laundry-depth",
+        "elementId": "c7302a0a0bdd8dc93c4336a2"
+      },
+      {
+        "expectedId": "bath-bottom-chain",
+        "elementId": "48e17898ba1111cc2ee56cb8"
+      },
+      {
+        "expectedId": "tv-width",
+        "elementId": "d5a6a0cdc2ba1a2a51577cd5"
+      },
+      {
+        "expectedId": "bedroom-size-x",
+        "elementId": "efa7b3c235a2fd13033171af"
+      },
+      {
+        "expectedId": "bedroom-size-y",
+        "elementId": "e8488937783b4eac66ca469b"
+      },
+      {
+        "expectedId": "kitchen-size-x",
+        "elementId": "6bca2e31e5fbf3c50648153f"
+      },
+      {
+        "expectedId": "kitchen-size-y",
+        "elementId": "303d3c215677ec2008a821cf"
+      },
+      {
+        "expectedId": "dining-size-x",
+        "elementId": "ee7c55b31f1b31925cd7e970"
+      },
+      {
+        "expectedId": "dining-size-y",
+        "elementId": "90b2adf3031d7d74e3987df3"
+      },
+      {
+        "expectedId": "living-size-x",
+        "elementId": "bc266c9192a775fdce92db65"
+      },
+      {
+        "expectedId": "living-size-y",
+        "elementId": "7471c350e837c7d4f7eb9819"
+      },
+      {
+        "expectedId": "bath-size-x",
+        "elementId": "32efb846bc91986442d34740"
+      },
+      {
+        "expectedId": "bath-size-y",
+        "elementId": "4b420d11c79a874aad7b1d14"
+      },
+      {
+        "expectedId": "bedroom-ceiling",
+        "elementId": "e1c3bc726ce6f8710fe222c7"
+      },
+      {
+        "expectedId": "kitchen-ceiling",
+        "elementId": "fce9c821ed4dda822707f698"
+      },
+      {
+        "expectedId": "dining-ceiling",
+        "elementId": "ce2dc19f8e48ea366fa3cd5f"
+      },
+      {
+        "expectedId": "living-ceiling",
+        "elementId": "54d64ffa045e07637a9f0454"
+      },
+      {
+        "expectedId": "bath-ceiling",
+        "elementId": "1dcafb40aa61a6d645397f1c"
+      },
+      {
+        "expectedId": "shower-width",
+        "elementId": "f8f7d5dbc3f1a3ade012ae34"
+      },
+      {
+        "expectedId": "shower-depth",
+        "elementId": "b2848b60a8600aa3d3678e91"
+      },
+      {
+        "expectedId": "pony-wall-max",
+        "elementId": "eb57be5a9a5f7eb45190b1e1"
+      }
+    ],
+    "missedDimensions": [],
+    "unmatchedCandidatesInAnnotatedRegion": [],
+    "outsideBenchmarkCandidatesNotScored": []
+  },
+  "rooms": {
+    "expected": 6,
+    "candidatesInAnnotatedRegion": 6,
+    "matched": 6,
+    "recall": 1.0,
+    "precisionForDefinedRoomAndSpaceLabels": 1.0,
+    "precisionScope": "Five primary room labels and the CLOSET named-space label visible on A1. This measures label extraction, not room polygon or wall/door geometry detection.",
+    "matches": [
+      {
+        "expectedId": "bedroom",
+        "elementId": "d1cc5ce2bbf9963797295a0c"
+      },
+      {
+        "expectedId": "kitchen",
+        "elementId": "27c52795f059a5b70d398f15"
+      },
+      {
+        "expectedId": "dining",
+        "elementId": "ce5b9ba9ba82ef8d78e7057a"
+      },
+      {
+        "expectedId": "living",
+        "elementId": "2b24a530445db5b9cfba75fc"
+      },
+      {
+        "expectedId": "bath",
+        "elementId": "ad878e475f4cef2410f66086"
+      },
+      {
+        "expectedId": "closet",
+        "elementId": "b07590f8671a4d681f852530"
+      }
+    ],
+    "missedRooms": [],
+    "unmatchedCandidatesInAnnotatedRegion": []
+  },
+  "schedules": {
+    "expectedRows": 8,
+    "actualRows": 8,
+    "matchedRows": 8,
+    "recall": 1.0,
+    "precision": 1.0,
+    "matches": [
+      {
+        "kind": "window_schedule",
+        "mark": "A",
+        "elementId": "9f407973f821788f2f64835f"
+      },
+      {
+        "kind": "window_schedule",
+        "mark": "B",
+        "elementId": "5cc9f18bd30e26dc3440744f"
+      },
+      {
+        "kind": "window_schedule",
+        "mark": "C",
+        "elementId": "f248b3563418f152d197d1c5"
+      },
+      {
+        "kind": "window_schedule",
+        "mark": "D",
+        "elementId": "a093547b27186a7f19f632e7"
+      },
+      {
+        "kind": "door_schedule",
+        "mark": "1",
+        "elementId": "062dac82a2ba0d8669b70fd9"
+      },
+      {
+        "kind": "door_schedule",
+        "mark": "2",
+        "elementId": "ae74808d67506c236c3d4034"
+      },
+      {
+        "kind": "door_schedule",
+        "mark": "3",
+        "elementId": "37f463d62ecb611344b9cf3c"
+      },
+      {
+        "kind": "door_schedule",
+        "mark": "4",
+        "elementId": "7a7a0e2b88a295959a99a148"
+      }
+    ],
+    "missingRows": [],
+    "incorrectRows": [],
+    "extraRows": [],
+    "scope": "Printed mark, type, dimensions/blank dimension, door notes, and window Y markers. No physical opening location or compliance claim."
+  },
+  "scheduleCandidates": [
+    {
+      "id": "9f407973f821788f2f64835f",
+      "kind": "window_schedule",
+      "label": "Window A: A | 3'-0\" x 4'-0\" | SLIDING",
+      "bbox": {
+        "x": 0.1238726,
+        "y": 0.8004343,
+        "width": 0.06569,
+        "height": 0.0095342
+      },
+      "originalValue": null,
+      "method": "embedded_text"
+    },
+    {
+      "id": "062dac82a2ba0d8669b70fd9",
+      "kind": "door_schedule",
+      "label": "Door 1: 1 | 3'-0\" x 6'-8\" | SWINGING | 1-3/8\" SOLID CORE",
+      "bbox": {
+        "x": 0.4933334,
+        "y": 0.8013812,
+        "width": 0.1428996,
+        "height": 0.0105191
+      },
+      "originalValue": null,
+      "method": "embedded_text"
+    },
+    {
+      "id": "5cc9f18bd30e26dc3440744f",
+      "kind": "window_schedule",
+      "label": "Window B: B | 4'-0\" x 4'-0\" | SLIDING",
+      "bbox": {
+        "x": 0.1238481,
+        "y": 0.8096388,
+        "width": 0.0657146,
+        "height": 0.0095342
+      },
+      "originalValue": null,
+      "method": "embedded_text"
+    },
+    {
+      "id": "ae74808d67506c236c3d4034",
+      "kind": "door_schedule",
+      "label": "Door 2: 2 | 3'-0\" x 6'-8\" | SWINGING",
+      "bbox": {
+        "x": 0.4932353,
+        "y": 0.8125555,
+        "width": 0.0701492,
+        "height": 0.0088524
+      },
+      "originalValue": null,
+      "method": "embedded_text"
+    },
+    {
+      "id": "f248b3563418f152d197d1c5",
+      "kind": "window_schedule",
+      "label": "Window C: C | 2'-0\" x 3'-0\" | SLIDING | Y",
+      "bbox": {
+        "x": 0.1237501,
+        "y": 0.8188433,
+        "width": 0.0849809,
+        "height": 0.0095343
+      },
+      "originalValue": null,
+      "method": "embedded_text"
+    },
+    {
+      "id": "37f463d62ecb611344b9cf3c",
+      "kind": "door_schedule",
+      "label": "Door 3: 3 | BI-FOLD | LAUNDRY ROOM",
+      "bbox": {
+        "x": 0.4931863,
+        "y": 0.82176,
+        "width": 0.1412825,
+        "height": 0.0088525
+      },
+      "originalValue": null,
+      "method": "embedded_text"
+    },
+    {
+      "id": "a093547b27186a7f19f632e7",
+      "kind": "window_schedule",
+      "label": "Window D: D | 3'-0\" x 2'-0\" | SLIDING | Y",
+      "bbox": {
+        "x": 0.1237255,
+        "y": 0.8280479,
+        "width": 0.0850054,
+        "height": 0.0095342
+      },
+      "originalValue": null,
+      "method": "embedded_text"
+    },
+    {
+      "id": "7a7a0e2b88a295959a99a148",
+      "kind": "door_schedule",
+      "label": "Door 4: 4 | 8'-0\" x 6'-8\" | SLIDING | 6FT CLOSET",
+      "bbox": {
+        "x": 0.4932599,
+        "y": 0.8309645,
+        "width": 0.1367685,
+        "height": 0.0095343
+      },
+      "originalValue": null,
+      "method": "embedded_text"
+    }
+  ],
+  "scale": {
+    "expectedLabels": 1,
+    "matchedLabels": 1,
+    "candidates": [
+      {
+        "id": "a3a073427c2c37d533e1369c",
+        "kind": "scale",
+        "label": "1/4\" = 1'-0\"",
+        "bbox": {
+          "x": 0.024755,
+          "y": 0.9589515,
+          "width": 0.040068,
+          "height": 0.017335
+        },
+        "originalValue": null,
+        "method": "embedded_text"
+      }
+    ],
+    "calibrated": false,
+    "scope": "Printed scale text only. No physical calibration or scale-derived measurements."
+  },
+  "processingMs": 1925.78,
+  "timingScope": "Extractor-reported duration only; excludes upload, queue delay, PDF rendering, human review, and this comparison.",
+  "incorrectlyIdentifiedArchitecturalFeatures": {
+    "assessed": false,
+    "count": null,
+    "reason": "Label assertions cannot determine wall/room polygons, opening geometry, or whether a dimension belongs to a feature. Unmatched label candidates are listed separately for inspection."
+  },
+  "overallPlanAccuracy": null,
+  "limitations": [
+    "Coordinates are approximate label boxes, not exact architectural feature extents.",
+    "No printed dimension is assigned to a particular wall or room boundary by these assertions.",
+    "No inferred dimensions, physical PDF scale calibration, or topology accuracy are asserted.",
+    "The schedule and scale expectations are separate checks, outside dimension and room-label accuracy denominators.",
+    "No San Jose requirements or San Diego compliance rules have been activated."
+  ],
+  "compliance": {
+    "enabled": false,
+    "results": [],
+    "reason": "San Diego County baseline; jurisdiction, application date, applicable code edition, and verified executable San Diego rules are not established. San Jose rules are inapplicable."
+  }
+}

@@ -1,0 +1,324 @@
+.plan-canvas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: clamp(520px, 76vh, 900px);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dfe5df;
+  border-radius: 9px;
+  background: #eef1ed;
+  color: #37453e;
+}
+.plan-canvas-toolbar {
+  display: flex;
+  flex: 0 0 49px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 13px;
+  border-bottom: 1px solid #dfe5df;
+  background: #fff;
+  z-index: 2;
+}
+.plan-canvas-page-controls,
+.plan-canvas-zoom-controls,
+.plan-canvas-page-controls form,
+.plan-canvas-page-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.plan-canvas-page-controls form {
+  gap: 6px;
+}
+.plan-canvas-page-controls button,
+.plan-canvas-zoom-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  transition:
+    background 120ms,
+    border-color 120ms;
+}
+.plan-canvas-toolbar button:hover:not(:disabled) {
+  background: #f2f5f1;
+  border-color: #e2e8e1;
+}
+.plan-canvas-toolbar button:focus-visible {
+  outline: 2px solid #28715c;
+  outline-offset: 2px;
+}
+.plan-canvas-toolbar button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.plan-canvas-file-icon {
+  color: #768078;
+  margin-right: 6px;
+}
+.plan-canvas-page-label,
+.plan-canvas-page-count,
+.plan-canvas-zoom-value {
+  color: #67736b;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.plan-canvas-page-label input {
+  width: 34px;
+  height: 26px;
+  padding: 0 3px;
+  border: 1px solid #e0e6df;
+  border-radius: 4px;
+  background: #fafbf9;
+  color: #34463c;
+  text-align: center;
+  appearance: textfield;
+  font-size: 11px;
+}
+.plan-canvas-page-label input::-webkit-inner-spin-button,
+.plan-canvas-page-label input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.plan-canvas-zoom-value {
+  min-width: 35px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.plan-canvas-toolbar-divider {
+  display: block;
+  width: 1px;
+  height: 16px;
+  background: #e7ebe5;
+  margin: 0 6px;
+}
+.plan-canvas-zoom-controls .plan-canvas-fit {
+  width: auto;
+  padding: 0 7px;
+  gap: 6px;
+  font-size: 11px;
+}
+.plan-canvas-fit.is-active {
+  color: #28614b;
+  background: #f0f5ef;
+}
+.plan-canvas-scroll {
+  flex: 1 1 0;
+  min-height: 0;
+  position: relative;
+  overflow: auto;
+  overscroll-behavior: contain;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: #c4cdc3 #edf0eb;
+  touch-action: pan-x pan-y;
+}
+.plan-canvas-scroll.is-panning {
+  cursor: grabbing;
+  user-select: none;
+}
+.plan-canvas-scroll:focus-visible {
+  outline: 2px solid #28715c;
+  outline-offset: -3px;
+}
+.plan-canvas-surface {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+}
+.plan-canvas-sheet {
+  position: relative;
+  flex: 0 0 auto;
+  background: white;
+  box-shadow:
+    0 2px 5px #223a2917,
+    0 15px 35px #223a2908;
+}
+.plan-canvas-sheet canvas {
+  display: block;
+  background: white;
+}
+.plan-canvas-annotations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.plan-canvas-annotation {
+  position: absolute;
+  min-width: 4px;
+  min-height: 4px;
+  padding: 0;
+  border: 1px solid #809bb788;
+  border-radius: 1px;
+  background: #7ca5d319;
+  cursor: pointer;
+  pointer-events: auto;
+  transition:
+    background 120ms,
+    box-shadow 120ms;
+}
+.plan-canvas-annotation.kind-room_label {
+  border-color: #5a8d737a;
+  background: #6ca28520;
+}
+.plan-canvas-annotation.kind-scale,
+.plan-canvas-annotation.kind-door_schedule,
+.plan-canvas-annotation.kind-window_schedule {
+  border-color: #a69a6e99;
+  background: #b8ac771c;
+}
+.plan-canvas-annotation:hover,
+.plan-canvas-annotation:focus-visible {
+  background: #648eac35;
+  box-shadow: 0 0 0 2px #7292a55c;
+  z-index: 3;
+  outline: none;
+}
+.plan-canvas-annotation.is-selected {
+  border: 2px solid #23735a;
+  background: #40977529;
+  box-shadow: 0 0 0 3px #28715c24;
+  z-index: 4;
+}
+.plan-canvas-annotation-label {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: -1px;
+  display: none;
+  max-width: 240px;
+  width: max-content;
+  padding: 5px 7px;
+  border: 1px solid #d9e5dd;
+  border-radius: 4px;
+  background: #f9fcf8;
+  color: #24513e;
+  box-shadow: 0 2px 5px #263c2d12;
+  font:
+    11px/1.4 Arial,
+    sans-serif;
+  text-align: left;
+  white-space: normal;
+  pointer-events: none;
+}
+.plan-canvas-annotation:hover .plan-canvas-annotation-label,
+.plan-canvas-annotation:focus-visible .plan-canvas-annotation-label,
+.plan-canvas-annotation.is-selected .plan-canvas-annotation-label {
+  display: block;
+}
+.plan-canvas-state {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 250px;
+  height: 100%;
+  padding: 30px;
+  color: #53675a;
+  text-align: center;
+  background: #eef1edea;
+}
+.plan-canvas-surface + .plan-canvas-state {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+}
+.plan-canvas-state strong {
+  font-size: 13px;
+  font-weight: 500;
+  color: #3e5043;
+}
+.plan-canvas-state span {
+  max-width: 350px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #7b877d;
+}
+.plan-canvas-error {
+  color: #7d714a;
+  background: #f3f3ed;
+}
+.plan-canvas-spinner {
+  animation: plan-canvas-spin 1s linear infinite;
+}
+.plan-canvas-footer {
+  flex: 0 0 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13px;
+  border-top: 1px solid #dfe5df;
+  background: #f9faf7;
+  color: #7c877d;
+  font-size: 10px;
+  gap: 8px;
+}
+.plan-canvas-footer > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.plan-canvas-footer-dot {
+  padding: 0 3px;
+  color: #b2bcb1;
+}
+@keyframes plan-canvas-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 640px) {
+  .plan-canvas {
+    height: 64vh;
+    min-height: 430px;
+  }
+  .plan-canvas-toolbar {
+    padding: 0 7px;
+    gap: 3px;
+  }
+  .plan-canvas-file-icon,
+  .plan-canvas-fit span,
+  .plan-canvas-page-label {
+    font-size: 0;
+  }
+  .plan-canvas-file-icon {
+    display: none;
+  }
+  .plan-canvas-page-label input {
+    width: 29px;
+  }
+  .plan-canvas-toolbar-divider {
+    margin: 0 2px;
+  }
+  .plan-canvas-footer {
+    padding: 0 8px;
+    font-size: 9px;
+  }
+  .plan-canvas-footer > span:first-child {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .plan-canvas-spinner {
+    animation-duration: 2s;
+  }
+  .plan-canvas-annotation,
+  .plan-canvas-toolbar button {
+    transition: none;
+  }
+}
