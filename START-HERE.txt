@@ -1,0 +1,13 @@
+PermitPilot — Interactive browser prototype
+
+Open PermitPilot.html in Chrome or Edge. No installation, login, internet connection, terminal or server is required after downloading.
+
+The actual San Diego County Plan F reference sheet A1 (source PDF page 5) opens automatically on first use. Click an annotation or evidence row to inspect it. Confirm or correct extracted facts. Use Export review for a PDF and Structured JSON for a data backup. All reviews lets you upload your own PDF, PNG or JPG. Embedded PDF text extraction is supported; scanned text/image OCR is unavailable.
+
+When browser storage is available, originals and changes are saved using IndexedDB. If the browser blocks storage, a prominent Temporary session notice appears; export before closing because that session is not saved. Clearing browser storage, changing browsers, or moving to a different origin may make saved records unavailable. Export important work. Processing runs while this tab is open. No documents are sent to a server.
+
+This is a browser-only prototype, separate from the full-stack application's authentication and organization features. There is no AI service or active building-code compliance rule. Printed dimensions and room labels are candidates for human review, not verified physical measurements or room boundaries. San Jose rules never apply to this San Diego reference.
+
+The included one-page vector excerpt was copied without content alteration from PDF page 5 of the user-supplied Plan F document. Official source: https://www.sandiegocounty.gov/content/dam/sdc/pds/bldg/adu_info/pds671_11x17.pdf . Source bytes were not independently authenticated against an official download. Original full-document SHA256: 89dbbd8f7977d772df44a4eea1a0ec35d795d9830538e3aa1e29f8d5bfe10bdc .
+
+Source code and build instructions: https://github.com/renogear/mvp-startup/tree/app/permitpilot-interactive
